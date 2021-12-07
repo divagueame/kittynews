@@ -22,7 +22,7 @@ function App() {
   // const res = await axios.get('https://httpbin.org/get', { params: { answer: 42 } });
   useEffect(()=>{ 
     setLoading(true);
-    // let cancel;
+    // let cancel;rgb(95, 93, 88)
     const controller = new AbortController();
     // 1ab8162809dc49dbb8380c360262aa15
     // f0de508a427043c881d2e185b12c222d 
@@ -65,11 +65,13 @@ function App() {
       <CssBaseline />
       <div className="App">
         <Header />
-      Page: {currentPage}
-      <Button onClick={prevBtnClick}>Previous</Button>
-      <Button onClick={nextBtnClick}>Next</Button>
-      <News news={news}/> 
+      {/* Page: {currentPage} */}
 
+      <News news={news}/> 
+      <div className="buttons-wrapper">
+        <Button variant="contained" onClick={prevBtnClick}>Previous</Button>
+        <Button variant="contained" onClick={nextBtnClick}>Next</Button>
+      </div>
         {/* <Typography>Page: {page}</Typography> */}
 {/* <Pagination count={10} page={page} onChange={handleChange} /> */}
       </div>
